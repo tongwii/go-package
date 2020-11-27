@@ -269,3 +269,12 @@ func DeleteMap(value *map[string]interface{}, attrs ...string) {
 		delete(*value, v)
 	}
 }
+
+// 三元运算
+// 例子：max := If(a > b, a, b).(int)
+func If(condition bool, trueVal, falseVal interface{}) interface{} {
+	if condition {
+		return trueVal
+	}
+	return falseVal
+}
